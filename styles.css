@@ -1,0 +1,105 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #283e4a; /* LinkedIn's dark gray text color */
+    line-height: 1.6;
+    background-color: #f3f6f8; /* LinkedIn's light gray background color */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #f3f6f8; /* LinkedIn's light gray background color */
+    color: #283e4a; /* LinkedIn's dark gray text color */
+    padding: 20px;
+    text-align: left; /* align text to the left */
+    border-bottom: 1px solid #caccce; /* LinkedIn's border color */
+}
+
+header p {
+    text-align: center;
+  }
+  
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #283e4a; /* LinkedIn's dark gray text color */
+    margin-top: 40px;
+}
+
+h3 {
+    color: #283e4a; /* LinkedIn's dark gray text color */
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+h4, h5 {
+    color: #b3b3b3; /* gray */
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section div {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #0073b1; /* LinkedIn's blue color */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #005582; /* LinkedIn's darker blue color */
+}
+
+strong {
+    color: #283e4a; /* LinkedIn's dark gray text color */
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+}
