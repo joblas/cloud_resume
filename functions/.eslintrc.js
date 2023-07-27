@@ -15,6 +15,7 @@ module.exports = {
     "prefer-arrow-callback": "error",
     "quotes": "off",
     "object-curly-spacing": "off",
+    "linebreak-style": "off",
   },
   overrides: [
     {
