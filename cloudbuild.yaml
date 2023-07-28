@@ -41,4 +41,4 @@ steps:
 secrets:
 - kmsKeyName: projects/cloud-resume-34b6d/locations/global/keyRings/cloudbuild/cryptoKeys/firebase-token
   secretEnv:
-    _FIREBASE_TOKEN: '1//06MD93-L38HRXCgYIARAAGAYSNwF-L9IrPHMXx6gI2bh7oGQpFRd-JGs9yyhkqs53ij-UwUrJT89JNwttdx8Z-xYex86tBH4oqcc'
+    _FIREBASE_TOKEN: 'AIzaSyAHw7kLx8USk_AjDymjKjIIR59ZQfvRgHw'
