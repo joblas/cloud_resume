@@ -17,6 +17,8 @@ steps:
 ']
 
 secrets:
-- kmsKeyName: projects/cloud-resume-34b6d/locations/global/keyRings/my-cloud-key/cryptoKeys/my-cloud-key
+- kmsKeyName: projects/cloud-resume-34b6d/locations/global/keyRings/my-cloud-key
   secretEnv:
     _FIREBASE_TOKEN: MS8vMDZNRDkzLUwzOEhSWENnWUlBUkFBR0FZU053Ri1MOUlyUEhNWHg2Z0kyYmg3b0dRcEZSZC1KR3M5eXloa3FzNTNpai1Vd1VySlQ4OUpOd3R0ZHg4Wi14WWV4ODZ0Qkg0b3FjYw==
+
+    
