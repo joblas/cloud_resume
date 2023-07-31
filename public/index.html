@@ -23,6 +23,7 @@
         <p>San Diego, CA 
           <!--<a href="/gs://cloud-resume-34b6d.appspot.com/Joseph Blas Resume.pdf" download>Download Resume</a>-->
         </p>
+        <p id="visit-count">Visits: Loading...
         <script>
             fetch('https://us-central1-cloud-resume-34b6d.cloudfunctions.net/visitorCount')
               .then(response => response.json())
@@ -34,6 +35,7 @@
                 document.getElementById('visit-count').innerText = 'Visits: Error loading count';
               });
           </script>
+        </p>
     </header>
     <main>
         <div class="left-column">
