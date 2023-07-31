@@ -1,5 +1,5 @@
 # We need a Node.js runtime, Firebase CLI requires this
-FROM node:14
+FROM node:v18.15.0-alpine3.15
 
 # Firebase CLI
 RUN npm install -g firebase-tools

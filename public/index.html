@@ -23,6 +23,17 @@
         <p>San Diego, CA 
           <!--<a href="/gs://cloud-resume-34b6d.appspot.com/Joseph Blas Resume.pdf" download>Download Resume</a>-->
         </p>
+        <script>
+            fetch('https://us-central1-cloud-resume-34b6d.cloudfunctions.net/visitorCount')
+              .then(response => response.json())
+              .then(data => {
+                document.getElementById('visit-count').innerText = 'Visits: ' + data.visits;
+              })
+              .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('visit-count').innerText = 'Visits: Error loading count';
+              });
+          </script>
     </header>
     <main>
         <div class="left-column">
@@ -117,16 +128,6 @@
             </section>
         </div>
     </main>
-    <script>
-        fetch('https://us-central1-cloud-resume-34b6d.cloudfunctions.net/visitorCount')
-          .then(response => response.json())
-          .then(data => {
-            document.getElementById('visit-count').innerText = 'Visits: ' + data.visits;
-          })
-          .catch(error => {
-            console.error('Error:', error);
-            document.getElementById('visit-count').innerText = 'Visits: Error loading count';
-          });
-      </script>
+
 </body>
 </html>
