@@ -3,7 +3,7 @@ const admin = require("firebase-admin");
 admin.initializeApp();
 
 exports.visitorCount = functions.https.onRequest(async (request, response) => {
-  const docRef = admin.firestore().doc("./public/index.html");
+  const docRef = admin.firestore().doc("pages/home");
   const doc = await docRef.get();
 
   if (!doc.exists) {
