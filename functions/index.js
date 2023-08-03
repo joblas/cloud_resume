@@ -3,11 +3,18 @@ const admin = require("firebase-admin");
 admin.initializeApp();
 
 exports.visitorCount = functions.https.onRequest(async (request, response) => {
-  // Set CORS headers for preflight requests
-  // Allows GETs from origin https://cloud-resume-34b6d.web.app with the Content-Type
-  // header and caches preflight response for an 1 hour
+  // Get the origin of the request
+  const origin = request.get('origin');
 
-  response.set('Access-Control-Allow-Origin', 'https://cloud-resume-34b6d.web.app');
+  // Array of valid origins
+  const validOrigins = ['https://cloud-resume-34b6d.web.app', 'https://cloudyjoe.com'];
+
+  // If the origin of the request is in our array of valid origins
+  if (validOrigins.includes(origin)) {
+    // Set the 'Access-Control-Allow-Origin' header to the origin of the request
+    response.set('Access-Control-Allow-Origin', origin);
+  }
+
   response.set('Access-Control-Allow-Methods', 'GET');
 
   if (request.method !== "GET") {
