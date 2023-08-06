@@ -1,105 +1,107 @@
 body {
-  font-family: 'Arial', sans-serif;
-  color: #283e4a; /* LinkedIn's dark gray text color */
-  line-height: 1.6;
-  background-color: #f3f6f8; /* LinkedIn's light gray background color */
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-header {
-  background-color: #f3f6f8; /* LinkedIn's light gray background color */
-  color: #283e4a; /* LinkedIn's dark gray text color */
-  padding: 20px;
-  text-align: left; /* align text to the left */
-  border-bottom: 1px solid #caccce; /* LinkedIn's border color */
-}
-
-header p {
-  text-align: left;
-}
-
-
-h1 {
-  font-size: 2.5em;
-}
-
-h2 {
-  color: #283e4a; /* LinkedIn's dark gray text color */
-  margin-top: 40px;
-}
-
-h3 {
-  color: #283e4a; /* LinkedIn's dark gray text color */
-  font-size: 1.3em;
-  margin-bottom: 5px;
-}
-
-h4, h5 {
-  color: #b3b3b3; /* gray */
-  font-size: 1.1em;
-  margin-bottom: 5px;
-}
-
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-section {
-  margin-bottom: 20px;
-}
-
-section div {
-  margin-bottom: 10px;
-}
-
-a {
-  color: #0073b1; /* LinkedIn's blue color */
-  text-decoration: none;
-}
-
-a:hover {
-  color: #005582; /* LinkedIn's darker blue color */
-}
-
-strong {
-  color: #283e4a; /* LinkedIn's dark gray text color */
-}
-
-@media screen and (max-width: 768px) {
+    font-family: 'Arial', sans-serif;
+    color: #e0e0e0;
+    line-height: 1.6;
+    background-color: #181818;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    background-color: #181818;
+    color: #e0e0e0;
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+  }
+  
+  header p {
+    text-align: left;
+  }
+  
   h1 {
-      font-size: 2em;
+    font-size: 2.5em;
   }
-
+  
+  h2, h3 {
+    color: #e0e0e0;
+  }
+  
   h2 {
-      font-size: 1.5em;
+    margin-top: 40px;
   }
-
+  
   h3 {
-      font-size: 1.2em;
+    font-size: 1.3em;
+    margin-bottom: 5px;
   }
-
+  
+  h4, h5 {
+    color: #b3b3b3;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+  }
+  
   main {
-      grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
   }
-}
-
-@media screen and (max-width: 480px) {
-  h1 {
-      font-size: 1.8em;
+  
+  section {
+    margin-bottom: 20px;
   }
-
-  h2 {
-      font-size: 1.3em;
+  
+  section div {
+    margin-bottom: 10px;
   }
-
-  h3 {
-      font-size: 1.1em;
+  
+  a {
+    color: #1E90FF;
+    text-decoration: none;
   }
-}
+  
+  a:hover {
+    color: #0073b1;
+  }
+  
+  strong {
+    color: #e0e0e0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+  
+    h2 {
+        font-size: 1.5em;
+    }
+  
+    h3 {
+        font-size: 1.2em;
+    }
+  
+    main {
+        grid-template-columns: 1fr;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+  
+    h2 {
+        font-size: 1.3em;
+    }
+  
+    h3 {
+        font-size: 1.1em;
+    }
+  }
+  
