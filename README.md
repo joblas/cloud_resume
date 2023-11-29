@@ -1,7 +1,7 @@
 # cloud_resume
 https://cloudyjoe.com/
 
-This repository contains html css files for a cloud resume using Firebase and Google Cloud Build
+This repository contains HTML, CSS, and JavaScript files for a cloud resume website using Firebase and Google Cloud Build. The JavaScript implements a counter function to track number of visitors.
 
 The Cloud Resume Challenge is a project where you build a simple resume website and host it on AWS. However, it can also be implemented using Google Cloud and Firebase. Here's a general step-by-step guide to doing the Cloud Resume Challenge with Firebase and Google Cloud:
 
