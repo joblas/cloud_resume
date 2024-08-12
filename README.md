@@ -86,5 +86,3 @@ steps:
 - Add this token as a secret named `_FIREBASE_TOKEN` to your Google Cloud Build trigger.
 
 Now, every time you push to your repository, Google Cloud Build will redeploy your site.
-
-That's it! This is a high-level guide to running the Cloud Resume Challenge with Firebase and Google Cloud. Please note that you might need to adapt these instructions to fit the specifics of your project.
