@@ -1,5 +1,5 @@
 # cloud_resume
-https://cloudyjoe.com/
+https://cloud-resume-34b6d.web.app/
 
 This repository contains HTML, CSS, and JavaScript files for a cloud resume website using Firebase and Google Cloud Build. The JavaScript implements a counter function to track number of visitors.
 
