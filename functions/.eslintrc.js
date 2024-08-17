@@ -13,9 +13,7 @@ module.exports = {
   rules: {
     "no-restricted-globals": ["error", "name", "length"],
     "prefer-arrow-callback": "error",
-    "quotes": "off",
-    "object-curly-spacing": "off",
-    "linebreak-style": "off",
+    "quotes": ["error", "double", {"allowTemplateLiterals": true}],
   },
   overrides: [
     {

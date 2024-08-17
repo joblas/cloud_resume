@@ -7,16 +7,23 @@
       "**/node_modules/**"
     ]
   },
-  "functions": {
-    "source": "functions",
-    "predeploy": [
-      "npm --prefix \"./functions\" run lint"
-    ],
-    "ignore": [
-      "node_modules",
-      ".git",
-      "firebase-debug.log",
-      "firebase-debug.*.log"
-    ]
+  "functions": [
+    {
+      "source": "functions",
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint"
+      ],
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "codebase": "default"
+    }
+  ],
+  "storage": {
+    "rules": "storage.rules"
   }
 }
