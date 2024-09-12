@@ -28,7 +28,14 @@ jobs:
           GOOGLE_APPLICATION_CREDENTIALS: /tmp/google-application-credentials.json
 
       - name: Deploy to Firebase Functions
-        run: npx firebase-tools deploy --only functions --project cloud-resume-34b6d
+        run: |
+          npx firebase-tools deploy --only functions --project cloud-resume-34b6d --debug
         env:
           GOOGLE_APPLICATION_CREDENTIALS: /tmp/google-application-credentials.json
         working-directory: ./functions
+
+      - name: List deployed functions
+        run: |
+          npx firebase-tools functions:list --project cloud-resume-34b6d
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: /tmp/google-application-credentials.json
