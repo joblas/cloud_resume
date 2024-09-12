@@ -9,6 +9,11 @@ steps:
   args: ['run', 'lint']
   dir: 'functions'
 
+# Build the functions
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['run', 'build']
+  dir: 'functions'
+
 # Deploy to Firebase
 - name: 'gcr.io/cloud-resume-34b6d/firebase'
   args: ['deploy', '--token', '$$ENCRYPTED_FIREBASE_TOKEN']

@@ -4,21 +4,21 @@ admin.initializeApp();
 
 exports.visitorCount = functions.https.onRequest(async (request, response) => {
   // Get the origin of the request
-  const origin = request.get('origin');
+  const origin = request.get("origin");
 
   // Array of valid origins
-  const validOrigins = ['https://cloud-resume-34b6d.web.app', 'https://cloudyjoe.com'];
+  const validOrigins = ["https://cloud-resume-34b6d.web.app", "https://cloudyjoe.com"];
 
   // If the origin of the request is in our array of valid origins
   if (validOrigins.includes(origin)) {
-    // Set the 'Access-Control-Allow-Origin' header to the origin of the request
-    response.set('Access-Control-Allow-Origin', origin);
+    // Set the "Access-Control-Allow-Origin" header to the origin of the request
+    response.set({"Access-Control-Allow-Origin": origin}); // Corrected
   }
 
-  response.set('Access-Control-Allow-Methods', 'GET');
+  response.set("Access-Control-Allow-Methods", "GET"); // Corrected
 
   if (request.method !== "GET") {
-    response.status(403).send('Forbidden!');
+    response.status(403).send("Forbidden!");
     return;
   }
 
