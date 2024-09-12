@@ -18,9 +18,17 @@ jobs:
         run: npm ci
         working-directory: ./functions
 
-      - name: Deploy to Firebase Functions
+      - name: Setup and verify Google Cloud credentials
         run: |
           echo '${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}' > /tmp/google-application-credentials.json
           export GOOGLE_APPLICATION_CREDENTIALS=/tmp/google-application-credentials.json
-          npx firebase-tools deploy --only functions --project cloud-resume-34b6d
+          npx firebase-tools --version
+          npx firebase-tools projects:list
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: /tmp/google-application-credentials.json
+
+      - name: Deploy to Firebase Functions
+        run: npx firebase-tools deploy --only functions --project cloud-resume-34b6d
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: /tmp/google-application-credentials.json
         working-directory: ./functions
