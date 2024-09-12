@@ -1,5 +1,12 @@
 {
   "projects": {
     "default": "cloud-resume-34b6d"
-  }
+  },
+  "targets": {},
+  "etags": {
+    "cloud-resume-34b6d": {
+      "extensionInstances": {}
+    }
+  },
+  "dataconnectEmulatorConfig": {}
 }

@@ -11,8 +11,7 @@
     {
       "source": "functions",
       "predeploy": [
-        "npm --prefix ./functions run lint",
-        "npm --prefix ./functions run build"
+        "npm --prefix ./functions run lint"
       ],
       "ignore": [
         "node_modules",
