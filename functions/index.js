@@ -1,5 +1,5 @@
 import * as functions from "firebase-functions";
-import * as admin from "firebase-admin";
+import admin from "firebase-admin";
 
 admin.initializeApp();
 
@@ -12,8 +12,7 @@ export const visitorCount = functions.https.onRequest(async (request, response) 
 
   // If the origin of the request is in our array of valid origins
   if (validOrigins.includes(origin)) {
-    // Set the "Access-Control-Allow-Origin" header to the origin of the request
-    response.set({"Access-Control-Allow-Origin": origin});
+    response.set({ "Access-Control-Allow-Origin": origin });
   }
 
   response.set("Access-Control-Allow-Methods", "GET");
@@ -27,10 +26,10 @@ export const visitorCount = functions.https.onRequest(async (request, response) 
   const doc = await docRef.get();
 
   if (!doc.exists) {
-    await docRef.set({visits: 0});
+    await docRef.set({ visits: 0 });
   }
 
   await docRef.update("visits", admin.firestore.FieldValue.increment(1));
   const snapshot = await docRef.get();
-  response.send({visits: snapshot.data().visits});
+  response.send({ visits: snapshot.data().visits });
 });

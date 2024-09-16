@@ -17,6 +17,10 @@ jobs:
       - name: Install dependencies
         run: npm install
         working-directory: ./functions
+        
+      - name: Lint
+        run: npm run lint
+        working-directory: ./functions
 
       - name: Setup and verify Google Cloud credentials
         run: |

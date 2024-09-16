@@ -1,30 +1,20 @@
 {
-  "hosting": {
-    "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  },
-  "functions": [
-    {
-      "source": "functions",
-      "codebase": "default",
+    "functions": {
+      "source": "functions"
+    },
+    "hosting": {
+      "public": "public",
       "ignore": [
-        "node_modules",
-        ".git",
-        "firebase-debug.log",
-        "firebase-debug.*.log",
-        "*.local"
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
       ],
-      "predeploy": [
-        "npm --prefix ./functions run lint"
-      ],
-      "region": "us-central1"
+      "rewrites": [
+        {
+          "source": "**",
+          "function": "visitorCount"
+        }
+      ]
     }
-  ],
-  "storage": {
-    "rules": "storage.rules"
   }
-}
+  
