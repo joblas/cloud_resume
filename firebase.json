@@ -10,9 +10,7 @@
   "functions": [
     {
       "source": "functions",
-      "predeploy": [
-        "npm --prefix ./functions run lint"
-      ],
+      "codebase": "default",
       "ignore": [
         "node_modules",
         ".git",
@@ -20,7 +18,10 @@
         "firebase-debug.*.log",
         "*.local"
       ],
-      "codebase": "default"
+      "predeploy": [
+        "npm --prefix ./functions run lint"
+      ],
+      "region": "us-central1"
     }
   ],
   "storage": {
