@@ -1,8 +1,9 @@
-const functions = require("firebase-functions");
-const admin = require("firebase-admin");
+import * as functions from "firebase-functions";
+import * as admin from "firebase-admin";
+
 admin.initializeApp();
 
-exports.visitorCount = functions.https.onRequest(async (request, response) => {
+export const visitorCount = functions.https.onRequest(async (request, response) => {
   // Get the origin of the request
   const origin = request.get("origin");
 
@@ -12,10 +13,10 @@ exports.visitorCount = functions.https.onRequest(async (request, response) => {
   // If the origin of the request is in our array of valid origins
   if (validOrigins.includes(origin)) {
     // Set the "Access-Control-Allow-Origin" header to the origin of the request
-    response.set({"Access-Control-Allow-Origin": origin}); // Corrected
+    response.set({"Access-Control-Allow-Origin": origin});
   }
 
-  response.set("Access-Control-Allow-Methods", "GET"); // Corrected
+  response.set("Access-Control-Allow-Methods", "GET");
 
   if (request.method !== "GET") {
     response.status(403).send("Forbidden!");
