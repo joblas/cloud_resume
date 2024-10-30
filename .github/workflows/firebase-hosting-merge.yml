@@ -27,7 +27,6 @@ jobs:
         with:
           credentials_json: '${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}'
           project_id: 'cloud-resume-34b6d'
-          service_account: 'github-action@cloud-resume-34b6d.iam.gserviceaccount.com'
 
       - name: 'Set up Cloud SDK'
         uses: 'google-github-actions/setup-gcloud@v2'
@@ -39,7 +38,7 @@ jobs:
         env:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
         run: |
-          firebase deploy --only functions --project cloud-resume-34b6d --token '${{ secrets.FIREBASE_TOKEN }}' --service-account github-action@cloud-resume-34b6d.iam.gserviceaccount.com
+          firebase deploy --only functions --project cloud-resume-34b6d --token '${{ secrets.FIREBASE_TOKEN }}'
         working-directory: ./functions
 
       - name: Deploy to Firebase Hosting
