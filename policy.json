@@ -1,0 +1,235 @@
+{
+  "bindings": [
+    {
+      "members": [
+        "serviceAccount:990916834753-compute@developer.gserviceaccount.com",
+        "serviceAccount:990916834753@cloudbuild.gserviceaccount.com"
+      ],
+      "role": "roles/apigateway.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:service-990916834753@gcp-sa-artifactregistry.iam.gserviceaccount.com"
+      ],
+      "role": "roles/artifactregistry.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:990916834753-compute@developer.gserviceaccount.com",
+        "serviceAccount:990916834753@cloudbuild.gserviceaccount.com"
+      ],
+      "role": "roles/cloudbuild.builds.builder"
+    },
+    {
+      "members": [
+        "serviceAccount:service-990916834753@gcp-sa-cloudbuild.iam.gserviceaccount.com"
+      ],
+      "role": "roles/cloudbuild.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:990916834753@cloudbuild.gserviceaccount.com"
+      ],
+      "role": "roles/cloudbuild.workerPoolUser"
+    },
+    {
+      "members": [
+        "serviceAccount:github-cloud-resume@cloud-resume-34b6d.iam.gserviceaccount.com"
+      ],
+      "role": "roles/cloudfunctions.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:github-action-671639271@cloud-resume-34b6d.iam.gserviceaccount.com",
+        "serviceAccount:github-cloud-resume@cloud-resume-34b6d.iam.gserviceaccount.com"
+      ],
+      "role": "roles/cloudfunctions.developer"
+    },
+    {
+      "members": [
+        "serviceAccount:service-990916834753@gcf-admin-robot.iam.gserviceaccount.com"
+      ],
+      "role": "roles/cloudfunctions.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-990916834753@compute-system.iam.gserviceaccount.com"
+      ],
+      "role": "roles/compute.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-990916834753@containerregistry.iam.gserviceaccount.com"
+      ],
+      "role": "roles/containerregistry.ServiceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:cloud-resume-34b6d@appspot.gserviceaccount.com"
+      ],
+      "role": "roles/datastore.user"
+    },
+    {
+      "members": [
+        "serviceAccount:990916834753@cloudservices.gserviceaccount.com"
+      ],
+      "role": "roles/editor"
+    },
+    {
+      "members": [
+        "serviceAccount:990916834753-compute@developer.gserviceaccount.com",
+        "serviceAccount:990916834753@cloudbuild.gserviceaccount.com"
+      ],
+      "role": "roles/firebase.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com",
+        "serviceAccount:service-990916834753@gcp-sa-firebase.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firebase.managementServiceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:firebase-adminsdk-6qk3y@cloud-resume-34b6d.iam.gserviceaccount.com",
+        "serviceAccount:github-cloud-resume@cloud-resume-34b6d.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firebase.sdkAdminServiceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:firebase-adminsdk-6qk3y@cloud-resume-34b6d.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firebaseappcheck.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:firebase-adminsdk-6qk3y@cloud-resume-34b6d.iam.gserviceaccount.com",
+        "serviceAccount:github-action-671639271@cloud-resume-34b6d.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firebaseauth.admin"
+    },
+    {
+      "condition": {
+        "expression": "request.time < timestamp(\"2023-08-01T04:11:39.487Z\")",
+        "title": "cloudbuild-connection-setup"
+      },
+      "members": [
+        "user:blasj408@gmail.com"
+      ],
+      "role": "roles/firebaseextensions.viewer"
+    },
+    {
+      "members": [
+        "serviceAccount:github-action-671639271@cloud-resume-34b6d.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firebasehosting.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:service-990916834753@gcp-sa-firebasemods.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firebasemods.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-990916834753@firebase-rules.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firebaserules.system"
+    },
+    {
+      "members": [
+        "serviceAccount:service-990916834753@gcp-sa-firebasestorage.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firebasestorage.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-990916834753@gcp-sa-firestore.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firestore.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:firebase-adminsdk-6qk3y@cloud-resume-34b6d.iam.gserviceaccount.com",
+        "serviceAccount:github-cloud-resume@cloud-resume-34b6d.iam.gserviceaccount.com"
+      ],
+      "role": "roles/iam.serviceAccountTokenCreator"
+    },
+    {
+      "members": [
+        "serviceAccount:990916834753@cloudbuild.gserviceaccount.com",
+        "serviceAccount:github-cloud-resume@cloud-resume-34b6d.iam.gserviceaccount.com"
+      ],
+      "role": "roles/iam.serviceAccountUser"
+    },
+    {
+      "members": [
+        "user:blasj408@gmail.com"
+      ],
+      "role": "roles/owner"
+    },
+    {
+      "members": [
+        "serviceAccount:service-990916834753@gcp-sa-pubsub.iam.gserviceaccount.com"
+      ],
+      "role": "roles/pubsub.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:github-cloud-resume@cloud-resume-34b6d.iam.gserviceaccount.com",
+        "serviceAccount:service-990916834753@serverless-robot-prod.iam.gserviceaccount.com"
+      ],
+      "role": "roles/run.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:github-action-671639271@cloud-resume-34b6d.iam.gserviceaccount.com"
+      ],
+      "role": "roles/run.viewer"
+    },
+    {
+      "members": [
+        "serviceAccount:github-cloud-resume@cloud-resume-34b6d.iam.gserviceaccount.com"
+      ],
+      "role": "roles/secretmanager.admin"
+    },
+    {
+      "condition": {
+        "expression": "request.time < timestamp(\"2023-08-01T04:11:39.487Z\")",
+        "title": "cloudbuild-connection-setup"
+      },
+      "members": [
+        "serviceAccount:service-990916834753@gcp-sa-cloudbuild.iam.gserviceaccount.com"
+      ],
+      "role": "roles/secretmanager.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:990916834753@cloudbuild.gserviceaccount.com"
+      ],
+      "role": "roles/secretmanager.secretAccessor"
+    },
+    {
+      "members": [
+        "serviceAccount:github-action-671639271@cloud-resume-34b6d.iam.gserviceaccount.com"
+      ],
+      "role": "roles/serviceusage.apiKeysViewer"
+    },
+    {
+      "members": [
+        "serviceAccount:github-action-671639271@cloud-resume-34b6d.iam.gserviceaccount.com",
+        "serviceAccount:github-cloud-resume@cloud-resume-34b6d.iam.gserviceaccount.com"
+      ],
+      "role": "roles/serviceusage.serviceUsageConsumer"
+    },
+    {
+      "members": [
+        "serviceAccount:firebase-adminsdk-6qk3y@cloud-resume-34b6d.iam.gserviceaccount.com"
+      ],
+      "role": "roles/storage.admin"
+    }
+  ],
+  "etag": "BwYluAkQjvM=",
+  "version": 3
+}
