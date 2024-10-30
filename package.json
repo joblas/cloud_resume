@@ -1,12 +1,7 @@
 {
   "dependencies": {
-<<<<<<< HEAD
-    "firebase-admin": "^11.11.1",
-    "firebase-functions": "^6.0.1"
-=======
     "firebase-admin": "^12.5.0",
-    "firebase-functions": "^3.2.0"
->>>>>>> f5455a465dd029dd5947cec6128a79a4962d29a3
+    "firebase-functions": "^6.0.1"
   },
   "devDependencies": {
     "eslint": "^9.10.0",
