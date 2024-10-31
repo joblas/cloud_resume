@@ -1,4 +1,4 @@
-name: Deploy to Firebase Hosting on PR
+name: Deploy to Firebase Functions on PR
 'on': pull_request
 jobs:
   build_and_preview:
@@ -7,7 +7,7 @@ jobs:
     permissions:
       contents: 'read'
       id-token: 'write'
-      pull-requests: 'write'  # Needed for PR preview deployments
+      pull-requests: 'write'
     
     steps:
       - uses: actions/checkout@v3
@@ -28,23 +28,19 @@ jobs:
       - name: 'Authenticate to Google Cloud'
         uses: 'google-github-actions/auth@v2'
         with:
-          credentials_json: '${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}'
+          credentials_json: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CLOUD_RESUME_34B6D }}'
           project_id: 'cloud-resume-34b6d'
           create_credentials_file: true
 
       - name: 'Set up Cloud SDK'
         uses: 'google-github-actions/setup-gcloud@v2'
 
-      - name: 'Deploy to Firebase Functions'
-        run: |
-          npm install -g firebase-tools
-          firebase deploy --only functions --project cloud-resume-34b6d --token '${{ secrets.FIREBASE_CLI_TOKEN }}'
-        working-directory: ./functions
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools@latest
 
-      - name: 'Deploy to Firebase Hosting Preview'
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}'
-          projectId: cloud-resume-34b6d
-          expires: 7d  # Preview URLs expire after 7 days
+      - name: Deploy to Firebase Functions
+        run: |
+          firebase deploy --only functions:visitorCount --project cloud-resume-34b6d \
+            --token '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CLOUD_RESUME_34B6D }}' \
+            --force
+        working-directory: ./functions
